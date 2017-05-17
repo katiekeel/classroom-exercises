@@ -17,8 +17,9 @@ class AllergensTest < Minitest::Test
   end
 
   def test_patient_is_allergic_to_eggs
+    # binding.pry
     patient = Allergens.new(1)
-    assert_equal patient.allergies, "eggs"
+    assert_equal patient.allergies, ["eggs"]
   end
 
   def test_patient_is_allergic_to_peanuts
@@ -28,7 +29,7 @@ class AllergensTest < Minitest::Test
 
   def test_patient_is_allergic_to_shellfish
     patient = Allergens.new(4)
-    assert_equal patient.allergies, "shellfish"
+    assert_equal patient.allergies, ["shellfish"]
   end
 
   def test_patient_is_allergic_to_straw_and_tom
